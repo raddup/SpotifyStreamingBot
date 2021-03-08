@@ -270,14 +270,13 @@ class Main:
                 element_present_cookies = EC.presence_of_element_located((By.XPATH, '//*[@id="onetrust-close-btn-container"]/button'))
                 WebDriverWait(driver, self.max_wait).until(element_present_cookies)
                 WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="onetrust-close-btn-container"]/button'))).click()
-                #element_present = EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[2]/div/button[1]'))
-                #WebDriverWait(driver, self.max_wait).until(element_present)
+                #WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="main"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[2]/div/button[2]/svg/path'))).click()
                 WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="main"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[2]/div/button[1]'))).click()
                 index = 0
                 for i in range(self.number_of_songs):
                     index += 1
                     playtime = randint(self.minplay,self.maxplay)
-                    WebDriverWait(driver,self.max_wait).until(EC.text_to_be_present_in_element((By.XPATH,'//*[@id="main"]/div/div[2]/div[2]/footer/div/div[2]/div/div[2]/div[1]'),'0:01'))
+                    #WebDriverWait(driver,self.max_wait).until(EC.text_to_be_present_in_element((By.XPATH,'//*[@id="main"]/div/div[2]/div[2]/footer/div/div[2]/div/div[2]/div[1]'),'0:01'))
                     sleep(playtime)
                     self.PrintText(Fore.CYAN,Fore.RED,'PLAYLIST OR ALBUM STREAM',f'SONG {index} | STREAMED FOR {playtime}s | WITH {username}:{password}')
                     WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="main"]/div/div[2]/div[2]/footer/div/div[2]/div/div[1]/button[4]'))).click()
