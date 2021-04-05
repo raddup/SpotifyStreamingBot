@@ -24,3 +24,4 @@ pip3 install -r requirements.txt
  I am not accountable for any of your actions.<br/>
  This is 100% educational, please do not misuse this tool.
  
+Note: To make bot functional, adjust the code with the xpath or manually click on cookies banner.
