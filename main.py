@@ -267,9 +267,9 @@ class Main:
 
             if self.Login(username,password,driver) == True:
                 driver.get(self.url)
-                element_present_cookies = EC.presence_of_element_located((By.XPATH, '//*[@id="onetrust-close-btn-container"]/button'))
-                WebDriverWait(driver, self.max_wait).until(element_present_cookies)
-                WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="onetrust-close-btn-container"]/button'))).click()
+                #element_present_cookies = EC.presence_of_element_located((By.XPATH, '//*[@id="onetrust-close-btn-container"]/button'))
+                #WebDriverWait(driver, self.max_wait).until(element_present_cookies)
+                #WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="onetrust-close-btn-container"]/button'))).click()
                 #WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="main"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[2]/div/button[2]/svg/path'))).click()
                 WebDriverWait(driver,self.max_wait).until(EC.element_to_be_clickable((By.XPATH,f'//*[@id="main"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[2]/div/button[1]'))).click()
                 index = 0
