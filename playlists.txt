@@ -1,0 +1,7 @@
+playlists not here
+
+go to main_edit.py, and edit the values:
+
+PLAYLIST_ONE_HERE
+
+etc..
