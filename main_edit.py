@@ -121,7 +121,6 @@ class Main:
         self.website_load_max_wait = 400
         self.login_check_max_wait = 400
         self.wait_before_start = float('40')
-        #spotifyplaylists = random.choice(open('http://ip-lookup.nl/spotifyplaylists.txt').readlines())
         self.url = random.choice(open('playlists.txt').readlines())
         print('')
 
